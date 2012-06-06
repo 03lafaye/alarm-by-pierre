@@ -43,7 +43,6 @@ public class AlarmActivity extends Activity
         calendar.set(Calendar.HOUR_OF_DAY, mAnalogClockTimePicker.getHour());
         calendar.set(Calendar.MINUTE, mAnalogClockTimePicker.getMinute());
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24*60*60*1000 , pendingIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
     }
-
 }

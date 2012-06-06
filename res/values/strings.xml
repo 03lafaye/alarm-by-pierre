@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Alarm</string>
     <string name="alarm_prompt">When will you start the day?</string>
+    <string name="wake_up">WAKE UP</string>
 </resources>

@@ -6,8 +6,12 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 
-class AlarmNotificationReceiver extends BroadcastReceiver {
+public class AlarmNotificationReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
+        Intent i = new Intent();
+        i.setClassName("com.pierre", "com.pierre.WakeUpActivity");
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(i);
     }
 }
