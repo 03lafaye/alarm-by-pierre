@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alarm</string>
+    <string name="alarm_prompt">When will you start the day?</string>
+</resources>
