@@ -50,14 +50,15 @@ public class WakeUpActivity extends Activity implements MediaPlayer.OnCompletion
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         mMediaPlayer.stop();
-        try {
-            mMediaPlayer.setDataSource(this, Uri.parse("file:///android_asset/sleep.mp3"));
-            mMediaPlayer.prepare();
-            mMediaPlayer.start();
-            mMediaPlayer.setOnCompletionListener(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        mMediaPlayer.reset();
+//        try {
+//            mMediaPlayer.setDataSource(this, Uri.parse("file:///android_asset/sleep.mp3"));
+//            mMediaPlayer.prepare();
+//            mMediaPlayer.start();
+//            mMediaPlayer.setOnCompletionListener(this);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         return super.onTouchEvent(event);
     }
 
