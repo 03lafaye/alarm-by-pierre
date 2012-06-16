@@ -10,7 +10,8 @@ public class AlarmNotificationReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Intent i = new Intent();
-        i.setClassName("com.pierre", "com.pierre.WakeUpActivity");
+        i.setAction(Intent.ACTION_VIEW);
+        i.setClassName("com.pierre", "com.pierre.AlarmActivity");
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(i);
     }
